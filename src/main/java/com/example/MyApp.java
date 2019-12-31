@@ -11,6 +11,13 @@ public class MyApp {
 
         System.out.println(messageService.getMessage());
 
+        MessageService messageService1 = applicationContext.getBean("messageRandomService", MessageService.class);
+
+        System.out.println(messageService.hashCode());
+        System.out.println(messageService1.hashCode());
+
+        System.out.println(messageService1.getMessage());
+
         applicationContext.close();
     }
 }
